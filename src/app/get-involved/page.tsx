@@ -19,7 +19,7 @@ const involvementCards = [
     icon: Code,
     title: "Hire Us",
     description:
-      "Full-stack development, AI integration, and digital transformation for businesses of all sizes.",
+      "Need a website, app, or platform? Delegate Digital builds production-grade products for BHC entities and beyond.",
     cta: "Book a Call",
     href: "/contact",
   },
@@ -27,23 +27,23 @@ const involvementCards = [
     icon: Handshake,
     title: "Become a Partner",
     description:
-      "Agencies and consultancies: white-label our services or co-deliver projects.",
-    cta: "Explore Partnerships",
+      "Agencies and freelancers: partner with Delegate Digital on overflow projects and specialized builds.",
+    cta: "Partner With Us",
     href: "/contact",
   },
   {
     icon: Users,
     title: "Join the Team",
     description:
-      "We're always looking for talented developers, designers, and strategists.",
-    cta: "View Open Roles",
+      "Engineers, designers, and PMs: join the team building rural America's digital infrastructure.",
+    cta: "View Openings",
     href: "/careers",
   },
   {
     icon: Gift,
     title: "Refer a Client",
     description:
-      "Know a business that needs digital help? Our referral program rewards you.",
+      "Know a business that needs digital transformation? Our referral program rewards introductions.",
     cta: "Refer Now",
     href: "/contact",
   },
@@ -51,17 +51,17 @@ const involvementCards = [
     icon: Search,
     title: "Request an Audit",
     description:
-      "Free website and tech stack audit. We'll identify quick wins and long-term opportunities.",
-    cta: "Get Your Audit",
+      "Get a free technical audit of your existing platform. Performance, security, and UX review.",
+    cta: "Request Audit",
     href: "/contact",
   },
 ];
 
 const stats = [
-  { end: 50, suffix: "+", label: "Projects Delivered" },
-  { end: 13, suffix: "", label: "BHC Entities" },
-  { end: 98, suffix: "%", label: "Client Satisfaction" },
-  { end: 24, suffix: "h", label: "Average Response Time" },
+  { end: 13, suffix: " Entity Clients", label: "Internal + External" },
+  { end: 15, suffix: " Websites", label: "Built & Deployed" },
+  { end: 443, suffix: "K+", label: "Lines of Code" },
+  { end: 99, suffix: ".9%", label: "Platform Uptime" },
 ];
 
 export default function GetInvolvedPage() {
@@ -77,8 +77,8 @@ export default function GetInvolvedPage() {
           </FadeIn>
           <FadeIn delay={0.2}>
             <p className="mt-6 text-lg text-muted max-w-2xl mx-auto">
-              Delegate Digital builds AI-powered digital experiences. Here&apos;s
-              how to work with us.
+              Delegate Digital builds the tech behind rural transformation.
+              Here&apos;s how to work with us.
             </p>
           </FadeIn>
         </section>
@@ -135,7 +135,7 @@ export default function GetInvolvedPage() {
               </h2>
               <p className="text-white/80 text-lg max-w-xl mx-auto mb-8">
                 From concept to production — Delegate Digital ships fast and
-                ships right.
+                builds to last.
               </p>
               <PulseGlow className="inline-block rounded-full">
                 <Link
