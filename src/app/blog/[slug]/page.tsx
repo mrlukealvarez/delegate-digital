@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, User, ArrowRight } from "lucide-react";
+import { AudioPlayer } from "@/components/audio-player";
 import { FadeIn, StaggerContainer, StaggerItem, CyanGlow, PulseGlow } from "@/components/motion";
 import { blogPosts, getBlogPost } from "@/lib/blog-posts";
 import { notFound } from "next/navigation";
@@ -85,6 +86,15 @@ export default async function BlogPostPage({
           </FadeIn>
         </div>
       </section>
+
+      {/* Audio Player */}
+      {post.audioUrl && (
+        <section className="border-t border-cyan/10">
+          <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6 lg:px-8">
+            <AudioPlayer src={post.audioUrl} title={`Listen: ${post.title}`} />
+          </div>
+        </section>
+      )}
 
       {/* Article Content */}
       <section className="border-t border-cyan/10">
