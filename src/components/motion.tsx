@@ -9,49 +9,44 @@ import {
 } from "framer-motion";
 import { ReactNode, useEffect, useRef, useState } from "react";
 
+const fadeInUpVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
+const fadeInDownVariants = { hidden: { opacity: 0, y: -20 }, visible: { opacity: 1, y: 0 } };
+const fadeInLeftVariants = { hidden: { opacity: 0, x: -40 }, visible: { opacity: 1, x: 0 } };
+const fadeInRightVariants = { hidden: { opacity: 0, x: 40 }, visible: { opacity: 1, x: 0 } };
+const fadeInVariants = { hidden: { opacity: 0 }, visible: { opacity: 1 } };
+
 export function FadeIn({
   children,
   delay = 0,
+  direction = "up",
   className = "",
 }: {
   children: ReactNode;
   delay?: number;
+  direction?: "up" | "down" | "left" | "right" | "none";
   className?: string;
 }) {
   const prefersReducedMotion = useReducedMotion();
-  return (
-    <motion.div
-      initial={prefersReducedMotion ? undefined : { opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
+  if (prefersReducedMotion) {
+    return <div className={className}>{children}</div>;
+  }
 
-export function SlideIn({
-  children,
-  direction = "left",
-  delay = 0,
-  className = "",
-}: {
-  children: ReactNode;
-  direction?: "left" | "right";
-  delay?: number;
-  className?: string;
-}) {
-  const prefersReducedMotion = useReducedMotion();
-  const x = direction === "left" ? -40 : 40;
+  const variantMap = {
+    up: fadeInUpVariants,
+    down: fadeInDownVariants,
+    left: fadeInLeftVariants,
+    right: fadeInRightVariants,
+    none: fadeInVariants,
+  };
+
   return (
     <motion.div
-      initial={prefersReducedMotion ? undefined : { opacity: 0, x }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay }}
       className={className}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay, ease: "easeOut" }}
+      variants={variantMap[direction]}
     >
       {children}
     </motion.div>
