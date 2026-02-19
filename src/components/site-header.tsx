@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/events", label: "Events" },
   { href: "/careers", label: "Careers" },
   { href: "/perks", label: "Perks" },
+  { href: "/get-involved", label: "Get Involved" },
 ];
 
 export function SiteHeader() {
