@@ -12,6 +12,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "ai-automation-small-business-guide",
+    audioUrl: "/audio/ai-automation-small-business-guide.mp3",
     title: "AI Automation for Small Businesses: The $500 Starting Point",
     date: "2026-02-15",
     author: "Luke Alvarez",
@@ -40,6 +41,7 @@ The businesses that automate now will compound their advantage every month. The 
   },
   {
     slug: "digital-transformation-rural-businesses",
+    audioUrl: "/audio/digital-transformation-rural-businesses.mp3",
     title: "Digital Transformation Is Not Just for Big Cities",
     date: "2026-02-10",
     author: "Luke Alvarez",
@@ -68,6 +70,7 @@ That is exactly what Delegate Digital does.`,
   },
   {
     slug: "bhc-ecosystem-advantage",
+    audioUrl: "/audio/bhc-ecosystem-advantage.mp3",
     title: "The Ecosystem Advantage: Why 13 Entities Are Better Than One",
     date: "2026-02-05",
     author: "Luke Alvarez",
