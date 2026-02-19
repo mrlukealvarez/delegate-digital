@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://delegate-digital.vercel.app'),
   title: {
     default: "Delegate Digital — Enterprise AI. Small Business Prices.",
     template: "%s | Delegate Digital",
