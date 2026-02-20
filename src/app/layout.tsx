@@ -35,10 +35,14 @@ export const metadata: Metadata = {
     title: "Delegate Digital",
     description: "Enterprise AI. Small Business Prices.",
     type: "website",
+    locale: "en_US",
     siteName: "Delegate Digital",
   },
   twitter: {
     card: "summary_large_image",
+    title: "Delegate Digital — Enterprise AI. Small Business Prices.",
+    description:
+      "B2B digital services and AI consulting for small businesses. Web design, mobile apps, automation, CRM, social media, and more. Part of Black Hills Consortium.",
   },
   robots: { index: true, follow: true },
 };
