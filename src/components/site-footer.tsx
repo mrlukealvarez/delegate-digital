@@ -82,6 +82,14 @@ export function SiteFooter() {
             <p className="text-xs text-muted">
               &copy; {new Date().getFullYear()} Delegate Digital. All rights reserved.
             </p>
+            <div className="flex items-center gap-4">
+              <Link href="/terms" className="text-xs text-muted hover:text-cyan transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/privacy" className="text-xs text-muted hover:text-cyan transition-colors">
+                Privacy Policy
+              </Link>
+            </div>
             <p className="text-xs text-muted">
               Grow Campus &middot; Custer, South Dakota
             </p>
